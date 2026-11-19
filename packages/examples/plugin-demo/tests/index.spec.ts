@@ -47,10 +47,12 @@ describe('demo greet tool', () => {
 
   it('uses the schema defaults when configuration omits both fields', async () => {
     const { ctx } = await mount()
+    const info = vi.spyOn(ctx.logger, 'info').mockImplementation(() => {})
 
     const result = await execute(ctx, 'greet', { name: 'Ada' })
 
     expect(result.content).toEqual([{ type: 'text', text: 'Hello, Ada!' }])
+    expect(info).toHaveBeenCalledWith('[plugin-demo] greet -> [{"type":"text","text":"Hello, Ada!"}]')
   })
 
   it('logs completed greet calls when observation is enabled', async () => {
