@@ -580,6 +580,15 @@
         "tests/**/*.ts"
       ]
     },
+    "packages/examples/plugin-demo": {
+      "entry": [
+        "tests/**/*.spec.ts"
+      ],
+      "project": [
+        "src/**/*.ts",
+        "tests/**/*.ts"
+      ]
+    },
     "packages/sdk/server": {
       "entry": [
         "tests/**/*.spec.ts",
