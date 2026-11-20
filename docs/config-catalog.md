@@ -1372,6 +1372,24 @@ export interface PlanModeConfig {
 
 Source: [`packages/plan/plan-mode/src/index.ts:70`](../packages/plan/plan-mode/src/index.ts)
 
+<a id="deepseek-aidsh-plugin-demo"></a>
+
+## `@deepseek-ai/dsh-plugin-demo`
+
+Requires: `tools`
+
+```ts config-catalog
+/** Deployment choices for the greeting tool. */
+export interface Config {
+  /** Word placed before the greeted name (default `Hello`). */
+  greeting: string
+  /** Log one line for each completed `greet` call (default true). */
+  observe: boolean
+}
+```
+
+Source: [`packages/examples/plugin-demo/src/index.ts:17`](../packages/examples/plugin-demo/src/index.ts)
+
 <a id="deepseek-aidsh-pwsh-local"></a>
 
 ## `@deepseek-ai/dsh-pwsh-local`

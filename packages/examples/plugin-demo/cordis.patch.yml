@@ -1,0 +1,7 @@
+# Bundle patch for `dsh plugin --profile <name> add ./packages/examples/plugin-demo`.
+# The row names the installed package so Node resolves it from the profile's
+# dependencies; omit `config` to accept the plugin's schema defaults.
+
+- insert:
+    - id: plugin-demo
+      name: '@deepseek-ai/dsh-plugin-demo'
